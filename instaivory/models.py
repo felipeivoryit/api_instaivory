@@ -7,3 +7,6 @@ class InstaivoryUsuario(models.Model):
     nome = models.CharField(max_length=60)
     email = models.CharField(max_length=60)
     sexo = models.CharField(max_length=10)
+
+    def __str__(self):
+        return self.nome

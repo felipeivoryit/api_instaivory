@@ -25,8 +25,13 @@ SECRET_KEY = '0h79a6+_wi*khm9n0v8q_87a-*5akhct_2j7fhf-2a2wokuyeo'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
 
+# CONFIGURAÇÃO ACESSO A REDE
+
+# python manage.py runserver 0.0.0.0:8000
+#ALLOWED_HOSTS = ['localhost', '192.168.1.193']
+
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -126,3 +131,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+# Adicionando endereço para pastas com arquivos statics que serão utilizados
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
+# Arquivos de media
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
